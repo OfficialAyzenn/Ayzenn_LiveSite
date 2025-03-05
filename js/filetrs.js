@@ -5,7 +5,6 @@ function filters(){
     
         filterButtons.forEach(button => {
             button.addEventListener("click", function () {
-                // Remove 'active' class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove("active"));
                 this.classList.add("active");
     
@@ -15,9 +14,9 @@ function filters(){
                     const category = item.getAttribute("data-category");
     
                     if (filterValue === "all" || category === filterValue) {
-                        item.style.display = "block"; // Show matching items
+                        item.style.display = "block"; 
                     } else {
-                        item.style.display = "none"; // Hide non-matching items
+                        item.style.display = "none"; 
                     }
                 });
             });
